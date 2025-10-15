@@ -1,342 +1,607 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-        <meta name="viewport" content="width=device-width, initial-scal=1.0" />
-        <title>My Portofolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="mediaqueries.css" />
-    </head>
-    <body>
-        <nav id="dekstop-nav">
-            <div class="logo">Rizkya Salsabila</div>
-            <div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portofolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="dekstop-nav">
+      <div class="logo">Rizkya Salsabila</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Rizkya Salsabila</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profil.png" alt="Profil Bella" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello I'm</p>
+        <h1 class="title">Rizkya Salsabila</h1>
+        <p class="section__text__p2">Frontend Web Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Rizkya_Salsabila_CV.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact' ">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn Profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/rizkya-salsabila-279b3b28b/' "
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github Profile"
+            class="icon"
+            onclick="location.href='https://github.com/RizkyaSalsabila' "
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class=".title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/profil.png"
+            alt="Profil Picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Projects Completed</h3>
+              <p>
+                4+ Projects <br />Web Development & Data Analysis / Data
+                Scientist
+              </p>
             </div>
-        </nav>
-        <nav id="hamburger-nav">
-            <div class="logo">Rizkya Salsabila</div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Current Education</h3>
+              <p>State Polytechnic of Malang</p>
             </div>
-        </nav>
-        <section id="profile">
-            <div class="section__pic-container">
-                <img src="./assets/profil.png" alt="Profil Bella">
-            </div>
-            <div class="section__text">
-                <p class="section__text__p1">Hello I'm</p>
-                <h1 class="title">Rizkya Salsabila</h1>
-                <p class="section__text__p2">Frontend Developer</p>
-                <div class="btn-container">
-                    <button 
-                        class="btn btn-color-2" onclick="window.open('./assets/CV-ByRizkyaSalsabila.pdf')" >
-                        Download CV
-                    </button>
-                    <button 
-                        class="btn btn-color-1" onclick="location.href='./#contact' " >
-                        Contact Info
-                    </button>
+          </div>
+          <div class="text-container">
+            <p>
+              Hi! I’m Rizkya Salsabila, an Informatics student with a strong
+              interest in data analysis, data science, and frontend web
+              development. I enjoy exploring datasets, discovering meaningful
+              insights, and presenting them through clear visualizations or
+              interactive web interfaces.
+            </p>
+            <p>
+              I’m currently expanding my skills in Python, machine learning, and
+              modern web technologies like Laravel and Tailwind CSS. My goal is
+              to combine analytical thinking and creative design to build
+              data-driven solutions that make an impact.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow Icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-containers">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Web Developer</h2>
+            <div class="article-container">
+              <div class="skills-row">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h4>HTML</h4>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h4>CSS</h4>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h4>Javascript</h4>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+              </div>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h4>Bootstrap / Tailwind CSS</h4>
+                  <p>Intermediate</p>
                 </div>
-                <div id="socials-container">
-                    <img 
-                        src="./assets/linkedin.png" 
-                        alt="My LinkedIn Profile" 
-                        class="icon" 
-                        onclick="location.href='https://www.linkedin.com/in/rizkya-salsabila-279b3b28b/' "
-                    />
-                    <img 
-                        src="./assets/github.png" 
-                        alt="My Github Profile" 
-                        class="icon" 
-                        onclick="location.href='https://github.com/RizkyaSalsabila' "
-                    />
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h4>Laravel</h4>
+                  <p>Learning</p>
                 </div>
+              </article>
             </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Data Analyst/Data Scientist</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h4>Microsoft Excel</h4>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h4>Python</h4>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h4>SQL</h4>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h4>Machine Learning</h4>
+                  <p>Learning</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow Icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+
+      <div class="projects-scroll-container">
+        <!-- Container scroll -->
+        <div class="projects-wrapper">
+          <!-- Project 1 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="assets/project1.PNG"
+                alt="EDA Data Jobs"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">EDA Data Jobs</h2>
+            <p class="project-desc">
+              This project aims to analyze a dataset related to job vacancies in
+              the data field. The analysis covers job trends, average salaries,
+              and the most commonly required experience
+              <br /><strong>Tools:</strong> Phyton, Google Colab, Git & Github
+            </p>
+            <br />
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/RizkyaSalsabila/eda-data-jobs'"
+              >
+                View on Github
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="assets/project4.png" alt="SIPOLA" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">SIPOLA</h2>
+            <p class="project-desc">
+              This system is designed to manage student achievement data and
+              provide competition recommendations based on their areas of
+              expertise.
+              <br /><strong>Tools:</strong> Laravel, AJAX, MySQL
+            </p>
+            <br /><br /><br />
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/TyaraKusumaNevada/PBL-2025_SIPOLA'"
+              >
+                View on Github
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="assets/project3.png"
+                alt="PRESPOL"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">PRESPOL</h2>
+            <p class="project-desc">
+              A web-based application for managing student organizations,
+              including member data, event scheduling, and activity reporting.
+              <br /><strong>Tools:</strong> Laravel, MySQL, jQuery
+            </p>
+            <br /><br /><br />
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Archin0/PRESPOL'"
+              >
+                View on Github
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="assets/project2.PNG"
+                alt="Asa Baswara Data"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Asa Baswara Data</h2>
+            <p class="project-desc">
+              Analysis of SurabayaDev community event data to understand
+              participant engagement trends.
+              <br /><strong>Tools:</strong> Google Colab, Pandas, Seaborn
+            </p>
+            <br /><br />
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/MRifdaM/SurabayaDev_Asa-Baswara_Data'"
+              >
+                View on Github
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="assets/project5.PNG"
+                alt="Asa Baswara Data"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              ML: Mini Projects Portfolio
+            </h2>
+            <p class="project-desc">
+              Developed several machine learning models for classification,
+              regression, and prediction case studies using public datasets.
+              <br /><strong>Tools:</strong> Google Colab, Pandas, Seaborn
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/MRifdaM/SurabayaDev_Asa-Baswara_Data'"
+              >
+                View on Github
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Panah geser bisa ditambahkan jika mau -->
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow Icon"
+        class="icon arrow"
+        onclick="location.href='./#certificates'"
+      />
+    </section>
+    <br /><br /><br />
+
+    <section id="certificates">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Certificates</h1>
+
+      <div class="certificates-wrapper">
+        <!-- Panah kiri -->
+        <button class="scroll-btn left" onclick="scrollLeft()">&#8592;</button>
+
+        <!-- Area scroll -->
+        <div class="certificates-scroll">
+          <!-- Card 1 -->
+          <div class="certificate-card">
             <img
-                src="./assets/arrow.png"
-                alt="Arrow Icon"
-                class="icon arrow"
-                onclick="location.href='./#experience'"
+              src="assets/DA_KOMDIGI.PNG"
+              alt="EDA Data Jobs"
+              class="certificate-img"
             />
-        </section>
-        <section id="about">
-            <p class="section__text__p1">Get To Know More</p>
-            <h1 class=".title">About Me</h1>
-            <div class="section-container">
-                <div class="section__pic-container">
-                    <img
-                        src="./assets/profil.png"
-                        alt="Profil Picture"
-                        class="about-pic"
-                    />
-                </div>
-                <div class="about-details-container">
-                    <div class="about-containers">
-                        <div class="details-container">
-                            <img 
-                                src="./assets/experience.png" 
-                                alt="Experience icon" 
-                                class="icon"
-                            />
-                            <h3>Experience</h3>
-                            <p>1+ years <br />Frontend Development</p>
-                        </div>
-                        <div class="details-container">
-                            <img
-                                src="./assets/education.png"
-                                alt="Education icon"
-                                class="icon"
-                            />
-                            <h3>Education</h3>
-                            <p>Politeknik Negeri Malang <br />SMKN 1 Purwosari</p>
-                        </div>
-                    </div>
-                    <div class="text-container">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-                        </p>
-                    </div>
-                </div>
+            <h2 class="certificate-title">Data Analysis Fundamentals</h2>
+            <p class="certificate-source">KOMDIGI — 2025</p>
+            <div class="btn-group">
+              <button
+                onclick="location.href='https://drive.google.com/file/d/1084UpsMMpdBYoSpwX2kW-IFBlEs1Vz3k/view?usp=sharing'"
+              >
+                View Certificate
+              </button>
             </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="certificate-card">
             <img
-                src="./assets/arrow.png"
-                alt="Arrow Icon"
-                class="icon arrow"
-                onclick="location.href='./#experience'"
+              src="assets/BR_KOMDIGI.PNG"
+              alt="SIPOLA"
+              class="certificate-img"
             />
-        </section>
-        <section id="experience">
-            <p class="section__text__p1">Explore My</p>
-            <h1 class="title">Experience</h1>
-            <div class="experience-details-containers">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <h2 class="experience-sub-title">Frontend Web Developer</h2>
-                        <div class="article-container">
-                            <article>
-                                <img
-                                    src="./assets/checkmark.png"
-                                    alt="Experience icon"
-                                    class="icon"
-                                />
-                                <div>
-                                    <h3>HTML</h3>
-                                    <p>Experienced</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img
-                                    src="./assets/checkmark.png"
-                                    alt="Experience icon"
-                                    class="icon"
-                                />
-                                <div>
-                                    <h3>CSS</h3>
-                                    <p>Experienced</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img
-                                    src="./assets/checkmark.png"
-                                    alt="Experience icon"
-                                    class="icon"
-                                />
-                                <div>
-                                    <h3>Javascript</h3>
-                                    <p>Experienced</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img
-                                    src="./assets/checkmark.png"
-                                    alt="Experience icon"
-                                    class="icon"
-                                />
-                                <div>
-                                    <h3>Bootstrap</h3>
-                                    <p>Experienced</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="details-container">
-                        <h2 class="experience-sub-title">Data Analyst</h2>
-                        <div class="article-container">
-                            <article>
-                                <img
-                                    src="./assets/checkmark.png"
-                                    alt="Experience icon"
-                                    class="icon"
-                                />
-                                <div>
-                                    <h3>Excel</h3>
-                                    <p>Experienced</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img
-                                    src="./assets/checkmark.png"
-                                    alt="Experience icon"
-                                    class="icon"
-                                />
-                                <div>
-                                    <h3>Phyton</h3>
-                                    <p>Basic</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img
-                                    src="./assets/checkmark.png"
-                                    alt="Experience icon"
-                                    class="icon"
-                                />
-                                <div>
-                                    <h3>SQL</h3>
-                                    <p>Basic</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img
-                                    src="./assets/checkmark.png"
-                                    alt="Experience icon"
-                                    class="icon"
-                                />
-                                <div>
-                                    <h3>R</h3>
-                                    <p>Learn</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
+            <h2 class="certificate-title">
+              Practical Real Business Application
+            </h2>
+            <p class="certificate-source">KOMDIGI — 2025</p>
+            <div class="btn-group">
+              <button
+                onclick="location.href='https://drive.google.com/file/d/1NyVDefo_xAzYruAi80GzcxacNixgeL2p/view?usp=sharing'"
+              >
+                View Certificate
+              </button>
             </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="certificate-card">
             <img
-                src="./assets/arrow.png"
-                alt="Arrow Icon"
-                class="icon arrow"
-                onclick="location.href='./#projects'"
+              src="assets/Web_Skilvul.PNG"
+              alt="SIPOLA"
+              class="certificate-img"
             />
-        </section>
-        <section id="projects">
-            <p class="section__text__p1">Browse My Recent</p>
-            <h1 class="title">Projects</h1>
-            <div class="experience-details-container">
-                <div class="about-containers">
-                    <div class="details-container color-container">
-                        <div class="article-container">
-                            <img
-                                src="./assets/project-1.png"
-                                alt="Project 1"
-                                class="project-img"
-                            />
-                        </div>
-                        <h2 class="experience-sub-title project-title">Project One</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/RizkyaSalsabila'">
-                                Github
-                            </button>
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/RizkyaSalsabila'">
-                                Live Demo
-                            </button>
-                        </div>
-                    </div>
-                    <div class="details-container color-container">
-                        <div class="article-container">
-                            <img
-                                src="./assets/project-2.png"
-                                alt="Project 2"
-                                class="project-img"
-                            />
-                        </div>
-                        <h2 class="experience-sub-title project-title">Project Two</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/RizkyaSalsabila'">
-                                Github
-                            </button>
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/RizkyaSalsabila'">
-                                Live Demo
-                            </button>
-                        </div>
-                    </div>
-                    <div class="details-container color-container">
-                        <div class="article-container">
-                            <img
-                                src="./assets/project-3.png"
-                                alt="Project 3"
-                                class="project-img"
-                            />
-                        </div>
-                        <h2 class="experience-sub-title project-title">Project Three</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/RizkyaSalsabila'">
-                                Github
-                            </button>
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/RizkyaSalsabila'">
-                                Live Demo
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <h2 class="certificate-title">Web Development Pemula</h2>
+            <p class="certificate-source">Skilvul — 2024</p>
+            <div class="btn-group">
+              <button
+                onclick="location.href='https://drive.google.com/file/d/1l7tWIF3hypAzL6pC2cnXCH0XX5G-jG_A/view?usp=sharing'"
+              >
+                View Certificate
+              </button>
             </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="certificate-card">
             <img
-                src="./assets/arrow.png"
-                alt="Arrow Icon"
-                class="icon arrow"
-                onclick="location.href='./#contact'"
+              src="assets/python_dicoding.PNG"
+              alt="PRESPOL"
+              class="certificate-img"
             />
-        </section>
-        <section id="contact">
-            <p class="section__text__p1">Get In Touch</p>
-            <h1 class="title">Contact Me</h1>
-            <div class="contact-info-upper-container">
-                <div class="contact-info-container">
-                    <img
-                        src="./assets/email.png"
-                        alt="Email icon"
-                        class="icon contact-icon email-icon"
-                    />
-                    <p><a href="mailto:rizkyasalsabil@email.com">rizkyasalsabil@gmail.com</a></p>
-                </div>
-                <div class="contact-info-container">
-                    <img
-                        src="./assets/linkedin.png"
-                        alt="LinkedIn icon"
-                        class="icon contact-icon"
-                    />
-                    <p><a href="https://www.linkedin.com/in/rizkya-salsabila-279b3b28b/">LinkedIn</a></p>
-                </div>
+            <h2 class="certificate-title">Starting programming with Phyton</h2>
+            <p class="certificate-source">Dicoding — 2025</p>
+            <div class="btn-group">
+              <button
+                onclick="location.href='https://www.dicoding.com/certificates/NVP75G0EWXR0'"
+              >
+                View Certificate
+              </button>
             </div>
-        </section>
-        <footer>
-            <nav>
-                <div class="nav-links-container">
-                    <ul class="nav-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <p>Copyrigt &#169; 2025 Rizkya Salsabila. All Right Reserved.</p>
-        </footer>
-        <script src="script.js"></script>
-    </body>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="certificate-card">
+            <img
+              src="assets/DS_MySkill.PNG"
+              alt="PRESPOL"
+              class="certificate-img"
+            />
+            <h2 class="certificate-title">Data Science Introduction</h2>
+            <p class="certificate-source">MySkill — 2025</p>
+            <div class="btn-group">
+              <button
+                onclick="location.href='https://drive.google.com/drive/folders/1cJn_BD-JDpFFd1dIzyRH6mIA6mKABaGN'"
+              >
+                View Certificate
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="certificate-card">
+            <img
+              src="assets/DA_Revou.PNG"
+              alt="PRESPOL"
+              class="certificate-img"
+            />
+            <h2 class="certificate-title">Intro to Data Analytics</h2>
+            <p class="certificate-source">RevoU — 2024</p>
+            <div class="btn-group">
+              <button
+                onclick="location.href='https://drive.google.com/file/d/1q6PdRTYkaWTjwHjef_NvODcpNT0aEpU9/view?usp=sharing'"
+              >
+                View Certificate
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="certificate-card">
+            <img
+              src="assets/DA_Coursera.png"
+              alt="PRESPOL"
+              class="certificate-img"
+            />
+            <h2 class="certificate-title">
+              Introduction to DA using Microsoft Excel
+            </h2>
+            <p class="certificate-source">Coursera — 2024</p>
+            <div class="btn-group">
+              <button
+                onclick="location.href='https://drive.google.com/file/d/1iZxBU7sxsDzCxT-9peehf0q3SYfz0LoQ/view?usp=sharing'"
+              >
+                View Certificate
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panah kanan -->
+        <button class="scroll-btn right" onclick="scrollRight()">
+          &#8594;
+        </button>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow Icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+
+    <section id="contact">
+      <p class="section__text__p1">Get In Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a href="mailto:rizkyasalsabil@email.com"
+              >rizkyasalsabil@gmail.com</a
+            >
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/rizkya-salsabila-279b3b28b/"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyrigt &#169; 2025 Rizkya Salsabila. All Right Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
