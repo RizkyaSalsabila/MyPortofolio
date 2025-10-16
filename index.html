@@ -14,7 +14,7 @@
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skils">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#certificates">Certificates</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -31,7 +31,7 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#skils" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
@@ -44,7 +44,9 @@
       <div class="section__text">
         <p class="section__text__p1">Hello I'm</p>
         <h1 class="title">Rizkya Salsabila</h1>
-        <p class="section__text__p2">Frontend Web Developer</p>
+        <p class="section__text__p2">
+          <span id="dynamic-text" class="fade">Data Analyst</span>
+        </p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -86,11 +88,7 @@
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
+              <img src="./assets/skills.png" alt="Skills icon" class="icon" />
               <h3>Projects Completed</h3>
               <p>
                 4+ Projects <br />Web Development & Data Analysis / Data
@@ -128,22 +126,22 @@
         src="./assets/arrow.png"
         alt="Arrow Icon"
         class="icon arrow"
-        onclick="location.href='./#experience'"
+        onclick="location.href='./#skills'"
       />
     </section>
-    <section id="experience">
+    <section id="skills">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Skills</h1>
-      <div class="experience-details-containers">
+      <div class="skills-details-containers">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Web Developer</h2>
+            <h2 class="skills-sub-title">Frontend Web Developer</h2>
             <div class="article-container">
               <div class="skills-row">
                 <article>
                   <img
                     src="./assets/checkmark.png"
-                    alt="Experience icon"
+                    alt="Skills icon"
                     class="icon"
                   />
                   <div>
@@ -154,7 +152,7 @@
                 <article>
                   <img
                     src="./assets/checkmark.png"
-                    alt="Experience icon"
+                    alt="Skills icon"
                     class="icon"
                   />
                   <div>
@@ -165,7 +163,7 @@
                 <article>
                   <img
                     src="./assets/checkmark.png"
-                    alt="Experience icon"
+                    alt="Skills icon"
                     class="icon"
                   />
                   <div>
@@ -177,7 +175,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -188,7 +186,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -199,12 +197,12 @@
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Data Analyst/Data Scientist</h2>
+            <h2 class="skills-sub-title">Data Analyst/Data Scientist</h2>
             <div class="article-container">
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -215,7 +213,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -226,7 +224,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -237,7 +235,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -276,8 +274,9 @@
             <p class="project-desc">
               This project aims to analyze a dataset related to job vacancies in
               the data field. The analysis covers job trends, average salaries,
-              and the most commonly required experience
-              <br /><strong>Tools:</strong> Phyton, Google Colab, Git & Github
+              and the most commonly required experience.
+              <br /><br /><strong>Tools:</strong> Phyton, Google Colab, Git &
+              Github
             </p>
             <br />
             <div class="btn-container">
@@ -300,9 +299,9 @@
               This system is designed to manage student achievement data and
               provide competition recommendations based on their areas of
               expertise.
-              <br /><strong>Tools:</strong> Laravel, AJAX, MySQL
+              <br /><br /><strong>Tools:</strong> Laravel, AJAX, MySQL
             </p>
-            <br /><br /><br />
+            <br /><br />
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -326,9 +325,10 @@
             <p class="project-desc">
               A web-based application for managing student organizations,
               including member data, event scheduling, and activity reporting.
-              <br /><strong>Tools:</strong> Laravel, MySQL, jQuery
+              <br /><br /><strong>Tools:</strong> Tailwind CSS, PHP Native,
+              MySQL
             </p>
-            <br /><br /><br />
+            <br /><br />
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -352,7 +352,8 @@
             <p class="project-desc">
               Analysis of SurabayaDev community event data to understand
               participant engagement trends.
-              <br /><strong>Tools:</strong> Google Colab, Pandas, Seaborn
+              <br /><br /><strong>Tools:</strong> Google Colab, Pandas, Seaborn,
+              Numpy
             </p>
             <br /><br />
             <div class="btn-container">
@@ -369,7 +370,7 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="assets/project5.PNG"
+                src="assets/project5.png"
                 alt="Asa Baswara Data"
                 class="project-img"
               />
@@ -380,12 +381,13 @@
             <p class="project-desc">
               Developed several machine learning models for classification,
               regression, and prediction case studies using public datasets.
-              <br /><strong>Tools:</strong> Google Colab, Pandas, Seaborn
+              <br /><br /><strong>Tools:</strong> Google Colab, Pandas, Seaborn,
+              Sklearn
             </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MRifdaM/SurabayaDev_Asa-Baswara_Data'"
+                onclick="location.href='https://github.com/RizkyaSalsabila/Assignment-Sem5_ML_Rizkya-Salsabila'"
               >
                 View on Github
               </button>
@@ -498,7 +500,7 @@
             <p class="certificate-source">MySkill — 2025</p>
             <div class="btn-group">
               <button
-                onclick="location.href='https://drive.google.com/drive/folders/1cJn_BD-JDpFFd1dIzyRH6mIA6mKABaGN'"
+                onclick="location.href='https://drive.google.com/file/d/1Zo-OWRsm7Gv7rNzIs25JvvXkP-o3tkmS/view?usp=sharing'"
               >
                 View Certificate
               </button>
@@ -593,7 +595,7 @@
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>

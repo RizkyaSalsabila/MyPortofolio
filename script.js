@@ -33,3 +33,24 @@ function toggleMenu() {
 
   scrollContainer.addEventListener('scroll', updateButtons);
   window.addEventListener('load', updateButtons);
+
+  const roles = [
+  "Frontend Web Developer",
+  "Data Scientist",
+  "Machine Learning Enthusiast",
+  "System Analyst"
+];
+
+let index = 0;
+const textElement = document.getElementById("dynamic-text");
+
+function changeText() {
+  textElement.classList.add("out");
+  setTimeout(() => {
+    textElement.textContent = roles[index];
+    textElement.classList.remove("out");
+    index = (index + 1) % roles.length;
+  }, 500);
+}
+
+setInterval(changeText, 2000);

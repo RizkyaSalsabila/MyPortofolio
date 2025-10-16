@@ -335,19 +335,19 @@ section {
   margin: auto 0;
 }
 
-/* EXPERIENCE SECTION */
-#experience {
+/* SKILLS SECTION */
+#skills {
   position: relative;
 }
 
-.experience-sub-title {
+.skills-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
-.experience-details-containers {
+.skills-details-containers {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -708,5 +708,25 @@ footer p {
     width: 32px;
     height: 32px;
     font-size: 1rem;
+  }
+}
+
+#dynamic-text {
+  border-right: 2px solid #333;
+  padding-right: 5px;
+  animation: blink 0.7s infinite;
+}
+
+.fade {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.fade.out {
+  opacity: 0;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }
