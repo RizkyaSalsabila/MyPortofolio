@@ -35,10 +35,7 @@ function toggleMenu() {
   window.addEventListener('load', updateButtons);
 
   const roles = [
-  "Frontend Web Developer",
-  "Data Scientist",
-  "Machine Learning Enthusiast",
-  "System Analyst"
+  "Software Developer"
 ];
 
 let index = 0;

@@ -20,32 +20,12 @@ p {
   margin-bottom: 1rem;
 }
 
-.projects-scroll-container {
-  overflow-x: auto;
-  padding: 1rem 0;
-}
-
-.projects-wrapper {
-  display: flex;
-  gap: 2rem;
-  min-width: max-content; /* supaya scroll bekerja */
-}
-
 .details-container {
   flex: 0 0 300px; /* lebarnya bisa disesuaikan */
   background-color: #fff;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Optional: hilangkan scrollbar default untuk tampilan lebih bersih */
-.projects-scroll-container::-webkit-scrollbar {
-  height: 6px;
-}
-.projects-scroll-container::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 3px;
 }
 
 /* TRANSITION */
@@ -187,6 +167,7 @@ section {
 
 /* PROFILE SECTION  */
 #profile {
+  scroll-margin-top: 80px;
   display: flex;
   justify-content: center;
   gap: 5rem;
@@ -283,6 +264,71 @@ section {
   gap: 1rem;
 }
 
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  justify-items: center; /* tengah secara horizontal */
+}
+
+.icon-item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+@keyframes bounce-up {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.icon-item.clicked {
+  animation: bounce-up 0.4s ease;
+}
+
+.icon-item img {
+  width: 60px; /* icon lebih besar */
+  height: 60px;
+}
+
+.icon-item:hover .icon-text {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+.icon-text {
+  position: absolute;
+  top: -10px; /* geser sedikit ke atas */
+  right: -10px; /* geser ke kanan */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(-5px);
+}
+
 /* ABOUT SECTION */
 #about {
   position: relative;
@@ -340,19 +386,6 @@ section {
   position: relative;
 }
 
-.skills-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
-
-.skills-details-containers {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .article-container {
   display: flex;
   text-align: initial;
@@ -369,49 +402,76 @@ article {
   gap: 0.5rem;
 }
 
-.skills-row {
-  display: flex; /* sejajarkan semua article secara horizontal */
-  justify-content: space-around; /* beri jarak antar skill */
-  align-items: center; /* ratakan secara vertikal */
-  flex-wrap: wrap; /* biar responsif di layar kecil */
-  gap: 1.5rem; /* jarak antar item */
-  margin-top: 1rem;
-}
-
+/* PROJECT SECTION */
 /* PROJECT SECTION */
 #projects {
   position: relative;
+  min-height: 100vh; /* supaya full satu layar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* biar konten di tengah vertikal */
+  align-items: center;
+  padding: 60px 0; /* kasih jarak atas bawah */
 }
 
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+/* Grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsif */
+  gap: 3rem; /* jarak antar kartu diperlebar */
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card style */
+.project-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .project-img {
-  width: 90%; /* gambar mengikuti lebar container */
-  height: 250px; /* tinggi seragam untuk semua */
-  object-fit: cover; /* biar gambar tidak gepeng, tapi tetap proporsional */
-  border-radius: 12px; /* opsional: biar sudutnya halus */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* opsional: biar tampak rapi */
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
 .project-title {
-  margin: 1rem;
-  color: black;
+  margin: 15px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+.btn-group button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* CONTACT */
+.btn-group button:hover {
+  background-color: #333;
+}
+
+CONTACT
 #contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  
 }
 
 .contact-info-upper-container {
@@ -497,7 +557,7 @@ footer p {
 }
 
 /* Grid utama */
-.certificates-grid {
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -508,7 +568,7 @@ footer p {
 }
 
 /* Card */
-.certificate-card {
+.project-card {
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -517,13 +577,13 @@ footer p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.certificate-card:hover {
+.project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Gambar */
-.certificate-img {
+.project-img {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -532,7 +592,7 @@ footer p {
 }
 
 /* Judul */
-.certificate-card h2 {
+.project-card h2 {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 0.8rem;
@@ -728,5 +788,153 @@ footer p {
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+/* HALAMAN DETAIL PROJECT */
+html,
+body {
+  height: 100%;
+  margin: 20px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  flex: 1;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.top-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.btn-back,
+.btn-github {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn-back {
+  background: #444;
+  color: #fff;
+}
+
+.btn-back:hover {
+  background: #000;
+}
+
+.btn-github {
+  background: #24292e;
+  color: #fff;
+}
+
+.btn-github:hover {
+  background: #000;
+  transform: translateY(-1px);
+}
+
+h1 {
+  margin-top: 10px;
+  font-size: 26px;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 360px;
+  object-fit: cover;
+  margin: 15px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.main-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.main-img:active {
+  transform: scale(0.98);
+}
+
+.support-imgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin: 15px 0;
+}
+.support-imgs img {
+  width: 100%;
+  height: 85px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.support-imgs img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.support-imgs img:active {
+  transform: scale(0.95);
+}
+footer {
+  text-align: center;
+  padding: 15px 0;
+  color: #666;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .top-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-back,
+  .btn-github {
+    width: 100%;
+    text-align: center;
+  }
+
+  .support-imgs img {
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .support-imgs img {
+    height: 60px;
   }
 }
