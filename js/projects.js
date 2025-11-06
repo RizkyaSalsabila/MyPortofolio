@@ -38,13 +38,10 @@ const projects = {
         "assets/view/p3.3.PNG",
     ],
     description: "Barokah Smartphone adalah sebuah <b>website e-commerce</b> yang menjual berbagai jenis smartphone dengan <b>harga terjangkau</b>. Website ini merupakan <b>implementasi perlombaan</b> setelah melalui berbagai babak, dimana pada tahap sebelumnya merupakan babak <b>analisis data</b> dan berlanjut ke <b>pembuatan desain di Figma</b>.",
-
-contribution: "Kontribusi saya pada babak ini adalah melakukan <b>slicing desain dari Figma</b> ke dalam bentuk <b>website statis</b> menggunakan <b>HTML</b>, <b>Tailwind CSS</b>, dan <b>jQuery</b> pada halaman <b>Detail Produk</b>, dengan waktu <b>2 jam (koding secara live)</b>.",
-
-github: "https://github.com/RizkyaSalsabila/SlicingDesign_AsaBaswara"
-
+    contribution: "Kontribusi saya pada babak ini adalah melakukan <b>slicing desain dari Figma</b> ke dalam bentuk <b>website statis</b> menggunakan <b>HTML</b>, <b>Tailwind CSS</b>, dan <b>jQuery</b> pada halaman <b>Detail Produk</b>, dengan waktu <b>2 jam (koding secara live)</b>.",
+    github: "https://github.com/RizkyaSalsabila/SlicingDesign_AsaBaswara"
   }
-};
+}
 
 // Ambil parameter ID dari URL
 const urlParams = new URLSearchParams(window.location.search);
