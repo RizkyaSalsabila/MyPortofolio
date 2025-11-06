@@ -28,6 +28,21 @@ const projects = {
     description: "PRESPOL adalah sistem pencatatan prestasi mahasiswa yang dikembangkan menggunakan <b>Tailwind CSS</b>, <b>PHP native</b>, dan <b>jQuery</b>. Aplikasi ini memudahkan mahasiswa dan admin dalam mencatat, mengelola, dan mengekspor data prestasi secara terstruktur. Selain fitur input dan verifikasi, PRESPOL juga menyediakan fungsi ekspor laporan otomatis ke format seperti <b>PPT</b> dan <b>PDF</b> untuk keperluan dokumentasi atau presentasi.",
     contribution: "Saya bertanggung jawab utama pada pengembangan <b>front-end</b> menggunakan Tailwind CSS dan jQuery, serta membantu tim <b>back-end (PHP native)</b> pada beberapa modul. Selain itu saya juga bertugas membuat dan mengotomasi pembuatan <b>laporan</b> (PPT / PDF) sehingga data siap dipresentasikan atau diarsipkan.",
     github: "https://github.com/RizkyaSalsabila/PRESPOL"
+  },
+
+  "slicingSales": {
+    title: "Barokah Smartphone - Slicing Design Website E-commerce",
+    mainImage: "assets/view/p3.2.PNG",
+    images: [
+        "assets/view/p3.1.PNG",
+        "assets/view/p3.3.PNG",
+    ],
+    description: "Barokah Smartphone adalah sebuah <b>website e-commerce</b> yang menjual berbagai jenis smartphone dengan <b>harga terjangkau</b>. Website ini merupakan <b>implementasi perlombaan</b> setelah melalui berbagai babak, dimana pada tahap sebelumnya merupakan babak <b>analisis data</b> dan berlanjut ke <b>pembuatan desain di Figma</b>.",
+
+contribution: "Kontribusi saya pada babak ini adalah melakukan <b>slicing desain dari Figma</b> ke dalam bentuk <b>website statis</b> menggunakan <b>HTML</b>, <b>Tailwind CSS</b>, dan <b>jQuery</b> pada halaman <b>Detail Produk</b>, dengan waktu <b>2 jam (koding secara live)</b>.",
+
+github: "https://github.com/RizkyaSalsabila/SlicingDesign_AsaBaswara"
+
   }
 };
 
@@ -42,10 +57,24 @@ if (projects[id]) {
   document.getElementById("description").innerHTML = p.description;
   document.getElementById("mainImage").src = p.mainImage;
 
-  document.getElementById("img1").src = p.images[0];
-  document.getElementById("img2").src = p.images[1];
-  document.getElementById("img3").src = p.images[2];
-  document.getElementById("img4").src = p.images[3];
+  // document.getElementById("img1").src = p.images[0];
+  // document.getElementById("img2").src = p.images[1];
+  // document.getElementById("img3").src = p.images[2];
+  // document.getElementById("img4").src = p.images[3];
+
+  const images = p.images || []; // jaga-jaga kalau p.images undefined
+
+  for (let i = 0; i < 4; i++) {
+    const imgElement = document.getElementById(`img${i + 1}`);
+    const src = images[i];
+
+    if (src) {
+      imgElement.src = src;
+      imgElement.style.display = "block"; // tampilkan jika ada
+    } else {
+      imgElement.style.display = "none"; // sembunyikan jika tidak ada
+    }
+  }
 
   document.getElementById("contribution").innerHTML = p.contribution;
   document.getElementById("githubLink").href = p.github;

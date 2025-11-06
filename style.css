@@ -96,28 +96,37 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: black;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
   position: absolute;
   top: 100%;
-  height: 0;
   background-color: white;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .menu-links a {
   display: block;
   padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
+  text-align: left;
+  font-size: 1.1rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links a:hover {
+  display: block;
+  padding: 10px;
+  text-align: left;
+  font-size: 1.4rem;
+  color: gray;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links li {
@@ -125,7 +134,7 @@ a:hover {
 }
 
 .menu-links.open {
-  max-height: 300px;
+  max-height: 500px;
 }
 
 .hamburger-icon.open span:first-child {
@@ -403,21 +412,20 @@ article {
 }
 
 /* PROJECT SECTION */
-/* PROJECT SECTION */
 #projects {
   position: relative;
-  min-height: 100vh; /* supaya full satu layar */
+  min-height: auto; /* supaya full satu layar */
   display: flex;
   flex-direction: column;
   justify-content: center; /* biar konten di tengah vertikal */
   align-items: center;
-  padding: 60px 0; /* kasih jarak atas bawah */
+  padding: 60px 20px; /* kasih jarak atas bawah */
 }
 
 /* Grid layout */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsif */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* responsif */
   gap: 3rem; /* jarak antar kartu diperlebar */
   width: 90%;
   max-width: 1200px;
@@ -465,13 +473,12 @@ article {
   background-color: #333;
 }
 
-CONTACT
+//CONTACT 
 #contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 70vh;
-  
 }
 
 .contact-info-upper-container {
@@ -480,9 +487,11 @@ CONTACT
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
+  max-width: 500px;
+  width: 100%;
 }
 
 .contact-info-container {
@@ -625,58 +634,6 @@ footer p {
   color: #333;
 }
 
-/* Wrapper utama */
-.certificates-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-/* Scroll area */
-.certificates-scroll {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 1rem;
-  padding: 1rem 0;
-  scrollbar-width: none;
-}
-
-.certificates-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-/* Card */
-.certificate-card {
-  min-width: 260px;
-  max-width: 300px;
-  background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  padding: 1.2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex-shrink: 0;
-}
-
-.certificate-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Gambar */
-.certificate-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 0.8rem;
-  margin-bottom: 1rem;
-}
-
 /* Tombol GitHub / Demo */
 .btn-group button {
   background-color: #222;
@@ -726,49 +683,10 @@ footer p {
 /* 🔹 RESPONSIVE BREAKPOINTS */
 /* ======================== */
 
-/* Tablet (<= 768px) */
-@media (max-width: 768px) {
-  #certificates {
-    padding: 3rem 1rem;
-  }
-
-  .certificate-card {
-    min-width: 220px;
-    max-width: 250px;
-  }
-
-  .scroll-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
-  }
-}
-
-/* Mobile (<= 480px) */
-@media (max-width: 480px) {
-  #certificates {
-    padding: 2rem 1rem;
-  }
-
-  .certificates-scroll {
-    gap: 0.7rem;
-  }
-
-  .certificate-card {
-    min-width: 200px;
-    max-width: 220px;
-    padding: 1rem;
-  }
-
-  .certificate-img {
-    height: 150px;
-  }
-
-  .scroll-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 1rem;
-  }
+.scroll-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
 }
 
 #dynamic-text {
@@ -788,6 +706,30 @@ footer p {
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+/* FIX: Contact section hilang di HP */
+@media (max-width: 768px) {
+    #contact {
+    height: auto; /* biar section menyesuaikan tinggi konten */
+    margin: 0 1rem; /* kurangi jarak biar pas di HP */
+  }
+
+  #contact {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column; /* biar rapi di HP */
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info-container {
+    flex-direction: column;
+    gap: 0.3rem;
   }
 }
 
@@ -882,7 +824,7 @@ h1 {
 }
 .support-imgs img {
   width: 100%;
-  height: 85px;
+  height: 100%;
   border-radius: 10px;
   object-fit: cover;
 }

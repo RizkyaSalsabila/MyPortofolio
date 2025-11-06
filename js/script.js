@@ -5,7 +5,7 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
-  const scrollContainer = document.querySelector('.certificates-scroll');
+const scrollContainer = document.querySelector('.certificates-scroll');
 
   function scrollLeft() {
     scrollContainer.scrollBy({
@@ -21,21 +21,19 @@ function toggleMenu() {
     });
   }
 
-  // Tombol kiri/kanan otomatis muncul sesuai posisi scroll
-  const leftBtn = document.querySelector('.scroll-btn.left');
-  const rightBtn = document.querySelector('.scroll-btn.right');
+// Tombol kiri/kanan otomatis muncul sesuai posisi scroll
+const leftBtn = document.querySelector('.scroll-btn.left');
+const rightBtn = document.querySelector('.scroll-btn.right');
 
-  function updateButtons() {
-    leftBtn.style.display = scrollContainer.scrollLeft <= 0 ? 'none' : 'block';
-    const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-    rightBtn.style.display = scrollContainer.scrollLeft >= maxScroll ? 'none' : 'block';
-  }
+function updateButtons() {
+  leftBtn.style.display = scrollContainer.scrollLeft <= 0 ? 'none' : 'block';
+  const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+  rightBtn.style.display = scrollContainer.scrollLeft >= maxScroll ? 'none' : 'block';
+}
 
-  scrollContainer.addEventListener('scroll', updateButtons);
-  window.addEventListener('load', updateButtons);
-
-  const roles = [
-  "Software Developer"
+const roles = [
+  "Web Developer",
+  "Software Developer",
 ];
 
 let index = 0;
@@ -51,3 +49,4 @@ function changeText() {
 }
 
 setInterval(changeText, 2000);
+
