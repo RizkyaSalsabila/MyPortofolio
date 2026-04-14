@@ -40,6 +40,20 @@ const projects = {
     description: "Barokah Smartphone adalah sebuah <b>website e-commerce</b> yang menjual berbagai jenis smartphone dengan <b>harga terjangkau</b>. Website ini merupakan <b>implementasi perlombaan</b> setelah melalui berbagai babak, dimana pada tahap sebelumnya merupakan babak <b>analisis data</b> dan berlanjut ke <b>pembuatan desain di Figma</b>.",
     contribution: "Kontribusi saya pada babak ini adalah melakukan <b>slicing desain dari Figma</b> ke dalam bentuk <b>website statis</b> menggunakan <b>HTML</b>, <b>Tailwind CSS</b>, dan <b>jQuery</b> pada halaman <b>Detail Produk</b>, dengan waktu <b>2 jam (koding secara live)</b>.",
     github: "https://github.com/RizkyaSalsabila/SlicingDesign_AsaBaswara"
+  },
+
+  "sistemPersuratan": {
+    title: "Sistem Persuratan Klinik - Aplikasi Pengarsipan Digital Berbasis Web",
+    mainImage: "assets/view/p4.1.PNG",
+    images: [
+      "assets/view/p4.2.PNG",
+      "assets/view/p4.3.PNG",
+      "assets/view/p4.4.PNG",
+      "assets/view/p4.5.PNG"
+    ],
+    description: "Sistem Persuratan Klinik merupakan aplikasi berbasis web yang digunakan untuk mengelola <b>surat masuk</b>, <b>surat keluar</b>, dan <b>arsip laporan</b> secara terpusat. Sistem ini dirancang untuk meningkatkan efisiensi pengelolaan dokumen dengan menyediakan fitur <b>unggah arsip</b>, <b>pencarian dokumen</b>, serta <b>dashboard analitik</b> untuk melihat tren data surat.",
+    contribution: "Berkontribusi dalam pengembangan sistem dengan merancang <b>database dan relasi</b>, mengimplementasikan <b>pengelolaan arsip & upload surat</b>, <b>filter jenis surat</b>, serta <b>laporan (PDF & Excel)</b>. Menggunakan <b>Laravel</b>, <b>MySQL</b>, <b>JavaScript</b>, dan <b>AJAX</b> untuk pengolahan data dinamis.",
+    github: "https://github.com/marsyaaurel08/sistem-persuratan"
   }
 }
 

@@ -363,10 +363,15 @@ section {
   border-radius: 2rem;
 }
 
+
+
+
 .arrow {
   position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  cursor: pointer;
 }
 
 .details-container {
@@ -412,24 +417,29 @@ article {
 }
 
 /* PROJECT SECTION */
+
+
+
+
 #projects {
   position: relative;
-  min-height: auto; /* supaya full satu layar */
+  
   display: flex;
   flex-direction: column;
-  justify-content: center; /* biar konten di tengah vertikal */
+  justify-content: center;
   align-items: center;
-  padding: 60px 20px; /* kasih jarak atas bawah */
+  padding: 60px 20px;
+  margin: 40px 0;
 }
 
 /* Grid layout */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* responsif */
-  gap: 3rem; /* jarak antar kartu diperlebar */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 /* Card style */
@@ -566,14 +576,18 @@ footer p {
 }
 
 /* Grid utama */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(250px, 1fr)
-  ); /* otomatis adaptif */
-  gap: 1.5rem;
-  margin-top: 2rem;
+/* Tablet */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* HP */
+@media (max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Card */
@@ -880,3 +894,5 @@ footer {
     height: 60px;
   }
 }
+
+
