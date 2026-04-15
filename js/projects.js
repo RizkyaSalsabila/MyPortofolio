@@ -81,8 +81,14 @@ if (projects[id]) {
 
   document.getElementById("title").innerText = p.title;
   document.getElementById("description").innerHTML = p.description;
+  document.getElementById("mainImage").src = p.mainImage;
 
-  const images = p.images || []; // kalau image tidak ada
+  // document.getElementById("img1").src = p.images[0];
+  // document.getElementById("img2").src = p.images[1];
+  // document.getElementById("img3").src = p.images[2];
+  // document.getElementById("img4").src = p.images[3];
+
+  const images = p.images || []; // jaga-jaga kalau p.images undefined
 
   for (let i = 0; i < 4; i++) {
     const imgElement = document.getElementById(`img${i + 1}`);
@@ -109,7 +115,3 @@ if (projects[id]) {
 } else {
   document.body.innerHTML = "<h2>Tidak ada Projek</h2>";
 }
-
-setTimeout(() => {
-  AOS.refresh();
-}, 300);
