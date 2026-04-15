@@ -162,9 +162,10 @@ a:hover {
 }
 
 /* SECTION  */
+
 section {
   padding-top: 4vh;
-  height: 96vh;
+  min-height: 100vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -289,7 +290,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   cursor: pointer;
 }
 
@@ -334,7 +337,9 @@ section {
   color: #333;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
   transform: translateY(-5px);
 }
 
@@ -362,9 +367,6 @@ section {
 .about-pic {
   border-radius: 2rem;
 }
-
-
-
 
 .arrow {
   position: absolute;
@@ -417,13 +419,9 @@ article {
 }
 
 /* PROJECT SECTION */
-
-
-
-
 #projects {
   position: relative;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -437,9 +435,10 @@ article {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
-  width: 90%;
+  margin: 2rem auto 0 auto;
+  width: 80%;
   max-width: 1200px;
+  padding: 0 20px;
 }
 
 /* Card style */
@@ -449,7 +448,9 @@ article {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .project-card:hover {
@@ -549,7 +550,9 @@ footer p {
   border-radius: 1.5rem;
   padding: 1rem;
   width: 260px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .details-container:hover {
@@ -597,7 +600,9 @@ footer p {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   text-align: center;
   padding: 1.2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .project-card:hover {
@@ -723,11 +728,10 @@ footer p {
   }
 }
 
-/* FIX: Contact section hilang di HP */
 @media (max-width: 768px) {
-    #contact {
-    height: auto; /* biar section menyesuaikan tinggi konten */
-    margin: 0 1rem; /* kurangi jarak biar pas di HP */
+  #contact {
+    height: auto;
+    margin: 0 1rem;
   }
 
   #contact {
@@ -817,7 +821,9 @@ h1 {
   object-fit: cover;
   margin: 15px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   cursor: pointer;
 }
 
@@ -894,5 +900,3 @@ footer {
     height: 60px;
   }
 }
-
-

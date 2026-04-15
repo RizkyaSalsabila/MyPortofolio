@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Proyek</title>
+    <title>Detail Proyek | Rizkya Salsabila</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -18,26 +20,64 @@
         >
       </div>
 
-      <h1 id="title"></h1>
+      <h1
+        id="title"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-easing="ease-out-cubic"
+      ></h1>
 
-      <img id="mainImage" class="main-img" />
+      <img
+        id="mainImage"
+        class="main-img"
+        data-aos="zoom-in"
+        data-aos-duration="1200"
+        data-aos-easing="ease-out-cubic"
+      />
 
-      <div class="support-imgs">
+      <div
+        class="support-imgs"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-easing="ease-out-cubic"
+        data-aos-delay="200"
+      >
         <img id="img1" />
         <img id="img2" />
         <img id="img3" />
         <img id="img4" />
       </div>
 
-      <p id="description"></p>
-      <p id="contribution"></p>
+      <p
+        id="description"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-easing="ease-out-cubic"
+        data-aos-delay="300"
+      ></p>
+      <p
+        id="contribution"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-easing="ease-out-cubic"
+        data-aos-delay="400"
+      ></p>
     </div>
 
     <footer>
-      Copyright &copy; 2025 <strong>Rizkya Salsabila</strong>. All Rights
+      Copyright &copy; 2026 <strong>Rizkya Salsabila</strong>. All Rights
       Reserved.
     </footer>
 
     <script src="js/projects.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 120,
+        once: false,
+      });
+    </script>
   </body>
 </html>

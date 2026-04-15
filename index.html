@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <nav id="dekstop-nav">
@@ -84,212 +85,278 @@
     </section>
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
-      <h1 class=".title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/profil.png"
-            alt="Profil Picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="text-container">
-            <p>
-              Saya merupakan mahasiswa aktif D4 Teknik Informatika Politeknik
-              Negeri Malang yang tertarik di bidang <b>web development</b> dan
-              <b>software development</b>. Saya senang membuat aplikasi web yang
-              interaktif dan mudah digunakan, serta mengembangkan solusi
-              software yang efisien untuk menyelesaikan masalah sehari-hari.
-              Saat ini, saya terus belajar dan mengasah kemampuan di Laravel,
-              Tailwind CSS, JavaScript, dan Python, sambil mempelajari praktik
-              pengembangan software dan sistem backend. Saya ingin menggabungkan
-              logika dan kreativitas untuk membuat aplikasi yang
-              <b>berguna, handal, dan berdampak</b>.
-            </p>
+      <h1 class="title">About Me</h1>
+      <div
+        class="animation"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-easing="ease-out-cubic"
+        data-aos-delay="150"
+      >
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img
+              src="./assets/profil.png"
+              alt="Profil Picture"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="text-container">
+              <p>
+                Saya merupakan mahasiswa D4 Teknik Informatika Politeknik Negeri
+                Malang yang berfokus pada bidang <b>web development</b> dan
+                <b>software development</b>. Saat ini, saya sedang menjalani
+                program magang di <b>Perum Jasa Tirta</b>, dengan keterlibatan
+                dalam
+                <b>perancangan dan pengembangan sistem berbasis web</b> untuk
+                meningkatkan efisiensi proses bisnis.
+              </p>
+              <p>
+                Saya memiliki minat dalam membangun aplikasi yang
+                <b>interaktif</b> dan <b>user-friendly</b>, serta mampu
+                menyelesaikan permasalahan nyata secara efektif. Saya terus
+                mengembangkan keterampilan di <b>Laravel</b>,
+                <b>Tailwind CSS</b>, <b>JavaScript</b>, dan <b>Python</b>, serta
+                memahami konsep <b>pengembangan backend</b> dan
+                <b>sistem berbasis data</b>. Dengan menggabungkan kemampuan
+                teknis dan pendekatan kreatif, saya berupaya menciptakan solusi
+                digital yang <b>fungsional</b>, <b>efisien</b>, dan
+                <b>berdampak</b>.
+              </p>
+            </div>
           </div>
         </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow Icon"
+          class="icon arrow"
+          onclick="location.href = './#skills'"
+        />
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow Icon"
-        class="icon arrow"
-        onclick="location.href = './#skills'"
-      />
     </section>
     <section id="skills">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Skills</h1>
-      <div class="skills-container">
-        <div class="icon-grid">
-          <div class="icon-item">
-            <img src="assets/icon_logo/html.png" alt="HTML5" />
-            <p class="icon-text">HTML</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/css-3.png" alt="CSS3" />
-            <p class="icon-text">CSS</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/java-script.png" alt="JavaScript" />
-            <p class="icon-text">JavaScript</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/bootstrap.png" alt="Bootstrap" />
-            <p class="icon-text">Bootstrap</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/tailwind.png" alt="Tailwind CSS" />
-            <p class="icon-text">Tailwind</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/jquery.png" alt="jQuery" />
-            <p class="icon-text">jQuery</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/vue.png" alt="Vue.js" />
-            <p class="icon-text">Vue</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/react.png" alt="React" />
-            <p class="icon-text">React</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/php.png" alt="PHP" />
-            <p class="icon-text">PHP</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/laravel.jpeg" alt="Laravel" />
-            <p class="icon-text">Laravel</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/postman.png" alt="Postman" />
-            <p class="icon-text">Postman</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/git.jpg" alt="Git" />
-            <p class="icon-text">Git</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/github.png" alt="GitHub" />
-            <p class="icon-text">GitHub</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/googles.png" alt="Google Tools" />
-            <p class="icon-text">Google Tools</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/figma.png" alt="Figma" />
-            <p class="icon-text">Figma</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/canva.png" alt="Canva" />
-            <p class="icon-text">Canva</p>
-          </div>
-          <div class="icon-item">
-            <img src="assets/icon_logo/vscode.png" alt="VS Code" />
-            <p class="icon-text">VS Code</p>
+      <div
+        class="animation"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-easing="ease-out-cubic"
+        data-aos-delay="150"
+      >
+        <div class="skills-container">
+          <div class="icon-grid">
+            <div class="icon-item">
+              <img src="assets/icon_logo/html.png" alt="HTML5" />
+              <p class="icon-text">HTML</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/css-3.png" alt="CSS3" />
+              <p class="icon-text">CSS</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/java-script.png" alt="JavaScript" />
+              <p class="icon-text">JavaScript</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/bootstrap.png" alt="Bootstrap" />
+              <p class="icon-text">Bootstrap</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/tailwind.png" alt="Tailwind CSS" />
+              <p class="icon-text">Tailwind</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/jquery.png" alt="jQuery" />
+              <p class="icon-text">jQuery</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/vue.png" alt="Vue.js" />
+              <p class="icon-text">Vue</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/react.png" alt="React" />
+              <p class="icon-text">React</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/php.png" alt="PHP" />
+              <p class="icon-text">PHP</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/laravel.jpeg" alt="Laravel" />
+              <p class="icon-text">Laravel</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/postman.png" alt="Postman" />
+              <p class="icon-text">Postman</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/git.jpg" alt="Git" />
+              <p class="icon-text">Git</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/github.png" alt="GitHub" />
+              <p class="icon-text">GitHub</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/googles.png" alt="Google Tools" />
+              <p class="icon-text">Google Tools</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/figma.png" alt="Figma" />
+              <p class="icon-text">Figma</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/canva.png" alt="Canva" />
+              <p class="icon-text">Canva</p>
+            </div>
+            <div class="icon-item">
+              <img src="assets/icon_logo/vscode.png" alt="VS Code" />
+              <p class="icon-text">VS Code</p>
+            </div>
           </div>
         </div>
+
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow Icon"
+          class="icon arrow"
+          onclick="location.href = './#projects'"
+        />
       </div>
-
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow Icon"
-        class="icon arrow"
-        onclick="location.href = './#projects'"
-      />
     </section>
-
 
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
+      <div
+        class="animation"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-easing="ease-out-cubic"
+        data-aos-delay="150"
+      >
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <img src="assets/view/p1.1.PNG" alt="SIPOLA" class="project-img" />
+            <h2 class="project-title">SIPOLA</h2>
+            <div class="btn-group">
+              <button onclick="location.href = 'projects.html?id=sipola'">
+                Lihat Detail
+              </button>
+            </div>
+          </div>
 
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <img src="assets/view/p1.1.PNG" alt="SIPOLA" class="project-img" />
-          <h2 class="project-title">SIPOLA</h2>
-          <div class="btn-group">
-            <button onclick="location.href = 'projects.html?id=sipola'">
-              Lihat Detail
-            </button>
+          <!-- Project 2 -->
+          <div class="project-card">
+            <img
+              src="assets/view/p2.1.PNG"
+              alt="Portfolio Website"
+              class="project-img"
+            />
+            <h2 class="project-title">PRESPOL</h2>
+            <div class="btn-group">
+              <button onclick="location.href = 'projects.html?id=prespol'">
+                Lihat Detail
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <img
+              src="assets/view/p3.2.PNG"
+              alt="Todo App"
+              class="project-img"
+            />
+            <h2 class="project-title">Slicing Sales Deisgn</h2>
+            <div class="btn-group">
+              <button onclick="location.href = 'projects.html?id=slicingSales'">
+                Lihat Detail
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <img
+              src="assets/view/p4.1.PNG"
+              alt="Sistem Persuratan Klinik"
+              class="project-img"
+            />
+            <h2 class="project-title">Sistem Persuratan Klinik</h2>
+            <div class="btn-group">
+              <button
+                onclick="location.href = 'projects.html?id=sistemPersuratan'"
+              >
+                Lihat Detail
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card">
+            <img
+              src="assets/view/p5.1.PNG"
+              alt="Sistem Training"
+              class="project-img"
+            />
+            <h2 class="project-title">Sistem Training</h2>
+            <div class="btn-group">
+              <button
+                onclick="location.href = 'projects.html?id=sistemTraining'"
+              >
+                Lihat Detail
+              </button>
+            </div>
           </div>
         </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-          <img
-            src="assets/view/p2.1.PNG"
-            alt="Portfolio Website"
-            class="project-img"
-          />
-          <h2 class="project-title">PRESPOL</h2>
-          <div class="btn-group">
-            <button onclick="location.href = 'projects.html?id=prespol'">
-              Lihat Detail
-            </button>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-          <img src="assets/view/p3.2.PNG" alt="Todo App" class="project-img" />
-          <h2 class="project-title">Slicing Sales Deisgn</h2>
-          <div class="btn-group">
-            <button onclick="location.href = 'projects.html?id=slicingSales'">
-              Lihat Detail
-            </button>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-          <img src="assets/view/p4.1.PNG" alt="Sistem Persuratan Klinik" class="project-img" />
-          <h2 class="project-title">Sistem Persuratan Klinik</h2>
-          <div class="btn-group">
-            <button onclick="location.href = 'projects.html?id=sistemPersuratan'">
-              Lihat Detail
-            </button>
-          </div>
-        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow Icon"
+          class="icon arrow"
+          onclick="location.href = './#contact'"
+        />
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow Icon"
-        class="icon arrow"
-        onclick="location.href = './#contact'"
-      />
     </section>
 
     <section id="contact">
       <p class="section__text__p1">Get In Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p>
-            <a href="mailto:rizkyasalsabil@email.com"
-              >rizkyasalsabil@gmail.com</a
-            >
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p>
-            <a href="https://www.linkedin.com/in/rizkya-salsabila-279b3b28b/"
-              >LinkedIn</a
-            >
-          </p>
+      <div
+        class="animation"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-easing="ease-out-cubic"
+        data-aos-delay="150"
+      >
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p>
+              <a href="mailto:rizkyasalsabil@email.com"
+                >rizkyasalsabil@gmail.com</a
+              >
+            </p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+            />
+            <p>
+              <a href="https://www.linkedin.com/in/rizkya-salsabila-279b3b28b/"
+                >LinkedIn</a
+              >
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -305,8 +372,18 @@
           </ul>
         </div>
       </nav>
-      <p>Copyrigt &#169; 2026 Rizkya Salsabila. All Right Reserved.</p>
+      <p>Copyright &#169; 2026 Rizkya Salsabila. All Rights Reserved.</p>
     </footer>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // AOS.init();
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 120,
+        once: false,
+      });
+    </script>
   </body>
 </html>

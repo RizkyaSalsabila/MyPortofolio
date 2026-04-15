@@ -54,6 +54,21 @@ const projects = {
     description: "Sistem Persuratan Klinik merupakan aplikasi berbasis web yang digunakan untuk mengelola <b>surat masuk</b>, <b>surat keluar</b>, dan <b>arsip laporan</b> secara terpusat. Sistem ini dirancang untuk meningkatkan efisiensi pengelolaan dokumen dengan menyediakan fitur <b>unggah arsip</b>, <b>pencarian dokumen</b>, serta <b>dashboard analitik</b> untuk melihat tren data surat.",
     contribution: "Berkontribusi dalam pengembangan sistem dengan merancang <b>database dan relasi</b>, mengimplementasikan <b>pengelolaan arsip & upload surat</b>, <b>filter jenis surat</b>, serta <b>laporan (PDF & Excel)</b>. Menggunakan <b>Laravel</b>, <b>MySQL</b>, <b>JavaScript</b>, dan <b>AJAX</b> untuk pengolahan data dinamis.",
     github: "https://github.com/marsyaaurel08/sistem-persuratan"
+  },
+
+  "sistemTraining": {
+   title: "Sistem Training - UI/UX Prototype Aplikasi Pengelolaan Pelatihan Berbasis Web",
+    mainImage: "assets/view/p5.1.PNG",
+    images: [
+      "assets/view/p5.2.PNG",
+      "assets/view/p5.3.PNG",
+      "assets/view/p5.4.PNG",
+      "assets/view/p5.5.PNG"
+    ],
+    description: "Sistem Training merupakan aplikasi berbasis web yang dirancang untuk mengelola <b>pelatihan internal dan eksternal</b> secara terpusat. Sistem ini dibuat untuk menggantikan proses manual dalam <b>pengajuan dan approval pelatihan</b> yang sebelumnya dilakukan secara langsung ke berbagai pihak, sehingga menjadi lebih <b>efisien</b> dan <b>terintegrasi</b>. Fitur utama meliputi <b>pengajuan pelatihan eksternal dengan approval berjenjang</b>, <b>manajemen pelatihan internal</b> (pendaftaran, pre-test, test, post-test), serta <b>sistem kelulusan dan sertifikasi</b>.",
+    contribution: "Berkontribusi pada tahap <b>perancangan UI/UX (prototype)</b> dengan merancang <b>halaman form pengajuan</b>, <b>profil pengguna</b>, <b>approval & detail approval</b>, CRUD data pengguna, serta <b>CRUD data kompetensi</b>. Desain difokuskan pada kemudahan penggunaan dan efisiensi alur kerja. Sistem direncanakan akan diimplementasikan menggunakan <b>Laravel</b>, <b>MySQL</b>, <b>JavaScript</b>, dan <b>AJAX</b> untuk mendukung pengolahan data dinamis.",
+    github: "https://www.figma.com/design/N063Ge4zO78pWx7sEDCUR0/Blueprint-pelatihan?node-id=3-9&t=T0SCxDGhXXOVpdrx-1",
+    linkLabel: "Lihat di Figma"
   }
 }
 
@@ -66,14 +81,8 @@ if (projects[id]) {
 
   document.getElementById("title").innerText = p.title;
   document.getElementById("description").innerHTML = p.description;
-  document.getElementById("mainImage").src = p.mainImage;
 
-  // document.getElementById("img1").src = p.images[0];
-  // document.getElementById("img2").src = p.images[1];
-  // document.getElementById("img3").src = p.images[2];
-  // document.getElementById("img4").src = p.images[3];
-
-  const images = p.images || []; // jaga-jaga kalau p.images undefined
+  const images = p.images || []; // kalau image tidak ada
 
   for (let i = 0; i < 4; i++) {
     const imgElement = document.getElementById(`img${i + 1}`);
@@ -88,7 +97,19 @@ if (projects[id]) {
   }
 
   document.getElementById("contribution").innerHTML = p.contribution;
-  document.getElementById("githubLink").href = p.github;
+
+  const githubLink = document.getElementById("githubLink");
+
+  if (p.github) {
+    githubLink.href = p.github;
+    githubLink.innerText = p.linkLabel || "Lihat di GitHub";
+  } else {
+    githubLink.style.display = "none"; // sembunyikan jika tidak ada link
+  }
 } else {
-  document.body.innerHTML = "<h2>Project not found</h2>";
+  document.body.innerHTML = "<h2>Tidak ada Projek</h2>";
 }
+
+setTimeout(() => {
+  AOS.refresh();
+}, 300);
